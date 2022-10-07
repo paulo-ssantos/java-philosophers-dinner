@@ -47,7 +47,7 @@ public class Filosofo extends Thread {
       this.currentTime = System.currentTimeMillis();
       if (this.currentTime - this.startTime > this.MAX_TIME) {
         this.endTime = System.currentTimeMillis();
-        
+        System.out.println("Filosofo " + this.id + " terminou de comer");
         this.stop();
         break;
       }
@@ -91,9 +91,7 @@ public class Filosofo extends Thread {
         e.printStackTrace();
       }
     } else {
-      System.out.println("----------------------------------------------");
       System.out.println("Filosofo " + this.id + " não conseguiu comer");
-      System.out.println("----------------------------------------------");
     }
   }
 
@@ -112,8 +110,21 @@ public class Filosofo extends Thread {
       this.leftFork = false;
       this.rightFork = false;
     }
-	}
-    
+	} else if (this.leftFork) {
+    System.out.println("Filosofo " + this.id + " devolvendo garfo esquerdo");
+    this.mesa.garfos[this.id].release();
+    this.leftFork = false;
+  } else if (this.rightFork) {
+    System.out.println("Filosofo " + this.id + " devolvendo garfo direito");
+    if (this.id == 4) {
+      this.mesa.garfos[0].release();
+      this.rightFork = false;
+    } else {
+      this.mesa.garfos[this.id + 1].release();
+      this.rightFork = false;
+    }
   }
+
+  } 
 
 }
