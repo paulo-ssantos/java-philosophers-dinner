@@ -1,11 +1,11 @@
-## Jantar dos Filósofos em JAVA
+## Philosophers' Dinner in JAVA
 
-O Jantar dos filósofos foi proposto por Dijkstra em 1965 como um problema de sincronização. A partir de então todos os algoritmos propostos como soluções de sincronização acabaram sendo relacionados ou testados contra o problema do Jantar dos filósofos.
+The Philosophers' Dinner was proposed by Dijkstra in 1965 as a synchronization problem. Since then, all algorithms proposed as synchronization solutions have either been related to or tested against the Philosophers' Dinner problem.
 
-#### Definição do Problema do Jantar dos Filósofos
-Cinco filósofos estão sentados em uma mesa redonda para jantar. Cada filósofo tem um prato com espaguete à sua frente. Cada prato possui um garfo para pegar o espaguete. O espaguete está muito escorregadio e, para que um filósofo consiga comer, será necessário utilizar dois garfos.
+#### Definition of the Philosophers' Dinner Problem
+Five philosophers are seated at a round table for dinner. Each philosopher has a plate of spaghetti in front of them. Each plate has a fork for picking up the spaghetti. The spaghetti is very slippery, and for a philosopher to eat, they will need to use two forks.
 
-Fonte: [Blog Pantuza](https://blog.pantuza.com/artigos/o-jantar-dos-filosofos-problema-de-sincronizacao-em-sistemas-operacionais)
+Source: [The Dining Philosophers Problem](https://medium.com/science-journal/the-dining-philosophers-problem-fded861c37ed)
 
 ## Folder Structure
 
@@ -13,11 +13,3 @@ The workspace contains two folders by default, where:
 
 - `src`: the folder to maintain sources
 - `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
